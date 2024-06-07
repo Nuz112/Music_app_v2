@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Monthly Report</h2>
+        <p>Dear {{ user_email }},</p>
+        <p>Here is your monthly report:</p>
+        <ul>
+            <li><strong>Playlists created:</strong> {{ playlists_created }}</li>
+            <li><strong>Albums created:</strong> {{ albums_created }}</li>
+            <li><strong>Songs uploaded:</strong> {{ songs_uploaded }}</li>
+        </ul>
+        <p>Best regards,<br>Your Music App Team</p>
+    </div>
+    <footer>This is an automated email. Please do not reply.</footer>
+</body>
+
+</html>
